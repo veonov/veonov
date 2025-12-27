@@ -1361,36 +1361,7 @@
                 }
             }
             
-            function typeTitle() {
-                let titleText = "Onitov <3";
-                let titleIndex = titleText.length;
-                let isDeleting = true;
-                let typingSpeed = 500;
-                
-                function animate() {
-                    if (isDeleting) {
-                        if (titleIndex > 0) {
-                            titleIndex--;
-                            pageTitle.textContent = titleText.substring(0, titleIndex);
-                            setTimeout(animate, typingSpeed);
-                        } else {
-                            isDeleting = false;
-                            setTimeout(animate, 1000);
-                        }
-                    } else {
-                        if (titleIndex < titleText.length) {
-                            titleIndex++;
-                            pageTitle.textContent = titleText.substring(0, titleIndex);
-                            setTimeout(animate, typingSpeed);
-                        } else {
-                            isDeleting = true;
-                            setTimeout(animate, 2000);
-                        }
-                    }
-                }
-                
-                animate();
-            }
+        
             
             createPlaylist();
             loadSong(currentSongIndex);
